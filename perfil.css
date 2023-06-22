@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Rubik', sans-serif;
+}
+.inscripcion,.mensualidad{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(218,28%,13%);
+}
+.inscripcion div,.mensualidad div{
+    width: 600px;
+}
+.payTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.payTitle img{
+    width: 200px;
+}
+.botonesPagar{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+.botonesPagar img{
+    width: 100px;
+}
+.botonesPagar button{
+    width: 20%;
+    background: transparent;
+    border: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: rgba(144, 129, 170, 0.1);
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+    border: 1px solid hsl(218,28%,13%);
+    cursor: pointer;
+}
+.botonesPagar button:hover{
+    transition: 0.5s;
+    background: transparent;
+    border: 1px solid hsl(218,28%,13%);
+}
+.gpay img{
+    width: 50px;
+    height: 50px;
+}
+.paypal img{
+    width: 80px;
+    height: 80px;
+}
+.oxxopay img{
+    width: 80px;
+    height: 20px;
+}
+
+
+
+
+main{
+    background: hsl(218,28%,13%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav{
+    width: 90%;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+nav img{
+    width: 50px;
+}
+.logo{
+    width: 90px;
+}
+nav a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+}
+
+.mensualidad{
+    visibility: hidden;
+}
+.inscripcion{
+    visibility: hidden;
+}
+.mostrar{
+    visibility: visible;
+}
+
+
+.pay{
+    margin-top: 5%;
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 10px 8px rgba(0, 0, 0,0.1);
+    padding: 40px;
+    gap: 50px;
+    border-radius: 10px;
+}
+.pay h1{
+    font-size: 7vh;
+}
+.pay h3{
+    font-size: 4vh;
+}
+.pay div{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.pay div button{
+    padding: 20px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: transparent;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.pay div button:hover{
+    border: 1px solid transparent;
+    color: hsl(218,28%,13%);
+    background: rgba(255, 255, 255, 0.8);
+    transition: 0.5s;
+}
+span{
+    color: rgba(255, 255, 255, 0.5);
+}
+.textoPagar{
+    display: flex;
+    justify-content: center;
+}
+select{
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+option{
+    background: white;
+    color: black;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+@media (max-width:880px){
+    .pay{
+        height: auto;
+    }
+    .pay div{
+        flex-direction: column;
+        gap: 3vh;
+    }
+}
+@media(max-width:670px){
+    .inscripcion,.mensualidad{
+        padding: 5% 0;
+    }
+    .payment2{
+        width: 90%;
+        margin: 5% 0;
+    }
+    .payTitle{
+        margin-left: 5%;
+    }
+    .inscripcion div,.mensualidad div{
+        width: 90%;
+    }
+    .botonesPagar{
+        width: 90%;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .botonesPagar button{
+        width: 90%;
+    }
+}
+@media(max-width:450px){
+    .pay h1{
+        font-size: 5vh;
+    }
+    .pay h3{
+        font-size: 3vh;
+    }
+    .pay{
+        width: 80%;
+        padding: 20px;
+    }
+    .pay div button{
+        font-size: 15px;
+    }
+    nav img{
+        width: 40px;
+    }
+    nav a{
+        font-size: 18px;
+    }
+}
