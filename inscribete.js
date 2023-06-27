@@ -1,13 +1,8 @@
 const username = document.querySelector(".username")
 const pin = document.querySelector(".pin")
 const email = document.querySelector(".email")
-const telefono = document.querySelector(".telefono");
+const telefono = document.querySelector(".telefono")
 
-
-document.querySelector(".signUpButton").addEventListener("click", ()=>{
-    const menuPay = document.querySelector(".payment")
-    menuPay.classList.toggle("mostrar")
-})
 
 const send = () => {
 

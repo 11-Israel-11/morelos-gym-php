@@ -1,0 +1,106 @@
+<?php 
+include("conexion.php");
+session_start();
+if (!isset($_SESSION['nombre'])) {
+    header("location: login.php");
+}
+$iduser = $_SESSION['nombre'];
+$sql = "SELECT nombre from cliente5 where nombre = '$iduser'";
+$resultado = $conexion->query($sql);
+$row = $resultado->fetch_assoc();
+ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <main>
+
+<!--Seccion de la pantalla de pagos-->
+        <div class="inscripcion">
+            <div class="payTitle">
+                <img src="img/pay.svg" alt="Pay illustration">
+                <h2>SELECT YOUR PAYMENT METHOD</h2>
+                <p>TOTAL: $400.00</p>
+            </div>
+            <div class="botonesPagar">
+                <button class="gpay"><img src="./img/google.svg" alt="G pay icon"></button>
+                <button class="paypal"><img src="./img/paypal.svg" alt="Paypal Icon"></button>
+                <button class="oxxopay"><img src="./img/oxxo_pay.png" alt="Oxxo pay Icon"></button>
+            </div>
+        </div>
+        <div class="mensualidad">
+            <div class="payTitle">
+                <img src="img/pay.svg" alt="Pay illustration">
+                <select name="opcionPago" class="pagarMes">
+                    <option value="1">Selecciona una opcion</option>
+                    <option value="2">Mes</option>
+                    <option value="3">Quincena</option>
+                </select>
+                <h2>SELECT YOUR PAYMENT METHOD</h2>
+                <div class="textoPagar">
+                    <p>TOTAL: $<p class="totalPagar">0</p></p>
+                </div>
+            </div>
+            <div class="botonesPagar">
+                <button class="gpay botonPago"><img src="./img/google.svg" alt="G pay icon"></button>
+                <button class="paypal botonPago"><img src="./img/paypal.svg" alt="Paypal Icon"></button>
+                <button class="oxxopay botonPago"><img src="./img/oxxo_pay.png" alt="Oxxo pay Icon"></button>
+            </div>
+        </div>
+
+        <div class="suscripcion">
+            <div class="sub-suscripcion">
+                <nav class="navigation-suscripcion">
+                    <h2>Suscripcion</h2>
+                    <img src="./img/close.png" alt="close img icon" class="close-suscripcion">
+                </nav>
+
+                <h4>Fecha de inicio: <span>06/12/2018</span></h4>
+
+                <h4>Fecha de fin de mensualidad: <span>07/12/2022</span></h4>
+
+                <h4>Suscripciones completadas:  <span> 7</span></h4>
+            </div>
+        </div>
+
+
+        <!--Seccion de la barra de navegacion-->
+
+        <nav>
+            <img src="./img/user2.png" alt="User icon">
+
+            <img src="./img/logo-morelos-fondo.png" alt="logo morelos gym" class="logo">
+
+            <a href="./index.html">Inicio</a>
+
+            <a href="salir.php">Cerrar sesion</a>
+
+        
+        </nav>
+
+
+        <!--Seccion donde elige que desea hacer, si inscribirse, pagar mensualidad o administrar su suscripcion-->
+
+        <section class="pay">
+            <h1>Bienvenido   <?php echo utf8_decode($row['nombre']); ?> </h1>
+           
+            <h3>¿Que deseas hacer?</h3>
+
+            <div>
+                <!--Despues hacer una validacion, si ya esta inscrito bloquear el boton-->
+                <button onclick="inscribirse()">Inscribirme</button>
+                <button onclick="pagar()">Pagar mensualidad</button>
+                <button onclick="administrar()">Administrar suscripcion</button>
+            </div>
+        </section>
+
+    </main>
+</body>
+<script src="./login1.js"></script>
+</html>

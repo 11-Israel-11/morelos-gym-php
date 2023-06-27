@@ -1,6 +1,6 @@
 <?php
 $server = "localhost";
-$user = "ISRAEL";
-$pass = "1105";
+$user = "root";
+$pass = "";
 $bd = "bdgymmorelos";
 ?>

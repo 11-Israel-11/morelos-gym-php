@@ -5,7 +5,7 @@
     color: rgba(255, 255, 255, 0.8);
     font-family: 'Rubik', sans-serif;
 }
-.inscripcion,.mensualidad{
+.inscripcion,.mensualidad,.suscripcion{
     position: absolute;
     width: 100%;
     display: flex;
@@ -15,9 +15,24 @@
     height: 100vh;
     background-color: hsl(218,28%,13%);
 }
-.inscripcion div,.mensualidad div{
+.inscripcion div,.mensualidad div,.suscripcion div{
     width: 600px;
 }
+.sub-suscripcion{
+    background: rgba(43, 35, 56, 0.1);
+    padding: 5%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.navigation-suscripcion{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
 .payTitle{
     display: flex;
     flex-direction: column;
@@ -106,8 +121,17 @@ nav a{
 .inscripcion{
     visibility: hidden;
 }
+.suscripcion{
+    visibility: hidden;
+}
 .mostrar{
     visibility: visible;
+}
+.ocultar{
+    visibility: hidden;
+}
+.close-suscripcion{
+    cursor: pointer;
 }
 
 
@@ -121,6 +145,7 @@ nav a{
     padding: 40px;
     gap: 50px;
     border-radius: 10px;
+    background: rgba(43, 35, 56, 0.1);
 }
 .pay h1{
     font-size: 7vh;

@@ -19,6 +19,15 @@
 .payment div{
     width: 600px;
 }
+.errorInputs{
+    border: 2px solid rgba(255, 0, 0, 0.7);
+}
+.errorDatos{
+    color: rgba(255, 0, 0, 0.7);
+    font-size: 20px;
+    text-align: center;
+    display: none;
+}
 .payTitle{
     display: flex;
     flex-direction: column;
